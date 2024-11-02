@@ -4,49 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Craftify Editor </title>
-
+    <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+    <script src="heap.js"></script>
+    <script src="huffman.js" type="module"></script>
+    <script src="script.js" type="module"></script>
     <style>
-        /* Add your custom styles here */
         body {
-            font-family: 'Josefin Sans', sans-serif;
-        }
-
-        h1 {
             text-align: center;
-			color: aliceblue;
+            font-family: sans-serif;
         }
 
-        .btn {
-            width: 100%;
-            margin-bottom: 10px;
+        #formContainer {
+            display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Add margin to the bottom of the form container */
+        }
+
+        button.center_buttons {
+            margin-top: 20px; /* Add margin to the top of the button */
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>File Craftify Editor </h1>
-        <div class="row">
-            <div class="col-md-6">
-                <a href="./Huffman_Compressor/index.html"><button type="button" class="btn btn-warning">Huffman Compressor</button></a>
-            </div>
-            <div class="col-md-6">
-                <a href="./textEditor.html"><button type="button" class="btn btn">Text Editor</button></a>
-            </div>
-        </div>
+    <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color: whitesmoke;">
+        File Compression Using Huffmann
+    </nav>
 
-        <div class="row">
-            <div class="col-md">
-                <a href="./Image-Editor/index.html"><button type="button" class="btn btn-primary">Image
-                        Editor</button></a>
-            </div>
-        </div>
+    <div>
+        <div id="formContainer">
+        <form method="post" enctype="multipart/form-data">
+            <!-- To take the file from the User ( Upload File ) -->
+            <input type="file" id="uploadedFile"/>
+        </form>
+    </div>
+        <br>
+        <!-- Button -->
+        <button type="button" class="btn btn-success center_buttons" id="encode">&nbsp;&nbsp;Compress and Download&nbsp;&nbsp;</button>
+        <br>
     </div>
 </body>
 
